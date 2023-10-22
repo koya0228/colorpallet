@@ -1,0 +1,31 @@
+.bl_sideMenu {
+  width: 100%;
+  height: 100%;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bl_sideMenu_main {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.bl_sideMenu_footer {
+  margin: auto 0 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bl_sideMenu_addPallet_form {
+  display: flex;
+}
+.bl_sideMenu_addPallet_input {
+  border: 1px solid black;
+}

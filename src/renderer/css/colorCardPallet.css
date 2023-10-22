@@ -1,0 +1,12 @@
+.bl_colorPallet {
+  padding: 8px;
+}
+
+.bl_colorPallet_body {
+  display: flex;
+  flex-wrap: wrap;
+
+  .bl_colorCard_wrapper {
+    /* flex: 1; */
+  }
+}
