@@ -6,7 +6,8 @@
 }
 
 .ly_leftContainer {
-  width: 24%;
+  width: 20%;
+  border-right: 1px solid black;
 }
 
 .ly_rightContainer {

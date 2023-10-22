@@ -1,9 +1,15 @@
 .bl_sideMenu {
   width: 100%;
   height: 100%;
-  padding: 8px;
   display: flex;
   flex-direction: column;
+}
+
+.bl_sideMenu_header {
+  height: 24px;
+  padding: 4px;
+  display: flex;
+  justify-content: end;
 }
 
 .bl_sideMenu_main {
@@ -15,6 +21,34 @@
   &::-webkit-scrollbar {
     width: 0;
   }
+}
+
+.bl_sideMenu_palletName_wrapper {
+  width: 100%;
+  height: 40px;
+  padding: 2px 0;
+  border-bottom: 1px solid black;
+}
+
+.bl_sideMenu_palletName {
+  width: 100%;
+  height: 100%;
+  padding: 0 4px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  
+  &:hover {
+    background-color: gray;
+  }
+
+  &.is_selected {
+    background-color: aquamarine;
+  }
+}
+
+.bl_sideMenu_palletName_ttl {
+  pointer-events: none;
 }
 
 .bl_sideMenu_footer {

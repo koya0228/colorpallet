@@ -56,12 +56,30 @@ function SideMenu({ setPalletId }) {
     palletDataNum = palletsDataKeys.length;
   }
 
+  function selectPalletName(e, i) {
+    const palletNameBtnList = document.querySelectorAll(
+      '.js_sideMenu_palletName',
+    );
+    for (let j = 0; j < palletNameBtnList.length; j += 1) {
+      palletNameBtnList[j].classList.remove('is_selected');
+    }
+    const target = e.target as HTMLTextAreaElement;
+    target.classList.add('is_selected');
+    setPalletId(palletsDataKeys[i]);
+  }
+
   for (let i = 0; i < palletDataNum; i += 1) {
     const palletData = palletsData[palletsDataKeys[i]];
     const palletNameListItem = (
-      <button type="button" onClick={() => setPalletId(palletsDataKeys[i])}>
-        <p>{palletData.name}</p>
-      </button>
+      <div className="bl_sideMenu_palletName_wrapper">
+        <button
+          className="bl_sideMenu_palletName js_sideMenu_palletName"
+          type="button"
+          onClick={(e) => selectPalletName(e, i)}
+        >
+          <p className="bl_sideMenu_palletName_ttl">{palletData.name}</p>
+        </button>
+      </div>
     );
     palletNameListElements.push(palletNameListItem);
   }
